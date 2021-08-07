@@ -30,7 +30,7 @@ class ResponseModal(BaseModel):
     ]
 
 
-@app.get('/pyunit/time', summary='时间提取接口', response_model=ResponseModal)
+@app.get('/unit/time', summary='时间提取接口', response_model=ResponseModal)
 def py_time(current_time: str = Query(None, description='填写你认为的开始时间',
                                       regex=r'[1-9]\d{3}-([0-9]|1[0-2])-([0-9]|[1-2][0-9]|3[0-1]) \d{1,2}:\d{1,2}:\d{1,2}',
                                       title='2020-4-22 00:00:00'),
